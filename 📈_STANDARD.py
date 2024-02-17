@@ -17,11 +17,16 @@ st.set_page_config(
 # Use st.cache_resource to only run once
 @st.cache_resource
 def init_connection():
-    return db.connect('Driver={SQL Server};'
-                      'Server=172.26.1.89;'
-                      'Database=DWH_WETAR;'
-                      'UID=irfan.fadhil;'
-                      'PWD=if@2024;')
+    return db.connect(
+        "DRIVER={ODBC Driver 17 for SQL Server};SERVER="
+        + st.secrets["server"]
+        + ";DATABASE="
+        + st.secrets["database"]
+        + ";UID="
+        + st.secrets["username"]
+        + ";PWD="
+        + st.secrets["password"]
+    )
 conn = init_connection()
 
 # Use st.cache_data to only rerun when the query changes or after 30 min

@@ -17,8 +17,8 @@ st.set_page_config(
 # Initialize connection
 # Use st.cache_resource to only run once
 @st.cache_resource
-def connect_to_vpn():
-    subprocess.run(["openvpn"]_
+#def connect_to_vpn():
+   # subprocess.run(["openvpn"]_
 def init_connection():
     return db.connect(
         "DRIVER={ODBC Driver 17 for SQL Server};SERVER="

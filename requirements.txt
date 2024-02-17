@@ -1,5 +1,5 @@
-numpy 
-pandas
-matplotlib
-pyodbc 
-streamlit 
+numpy 1.26.4
+pandas 2.2.0
+matplotlib 3.8.2
+pyodbc 4.0.39
+streamlit 1.28.0
